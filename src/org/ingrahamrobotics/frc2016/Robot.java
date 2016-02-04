@@ -1,12 +1,13 @@
 
-package org.usfirst.frc.team4030.robot;
+package org.ingrahamrobotics.frc2016;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import org.usfirst.frc.team4030.robot.commands.MotorCommands;
-import org.usfirst.frc.team4030.robot.subsystems.DriveMotorSubsystem;
+
+import org.ingrahamrobotics.frc2016.commands.TankDrive;
+import org.ingrahamrobotics.frc2016.subsystems.TankMotors;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -17,7 +18,7 @@ import org.usfirst.frc.team4030.robot.subsystems.DriveMotorSubsystem;
  */
 public class Robot extends IterativeRobot {
 
-	public static final DriveMotorSubsystem exampleSubsystem = new DriveMotorSubsystem();
+	public static final TankMotors tankMotors = new TankMotors();
 	public static OI oi;
 
     Command autonomousCommand;
@@ -29,7 +30,7 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		oi = new OI();
         // instantiate the command used for the autonomous period
-        autonomousCommand = new MotorCommands();
+        autonomousCommand = null;
     }
 	
 	public void disabledPeriodic() {

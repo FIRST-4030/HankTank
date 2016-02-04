@@ -1,26 +1,25 @@
 
-package org.usfirst.frc.team4030.robot.commands;
+package org.ingrahamrobotics.frc2016.commands;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 
-import org.usfirst.frc.team4030.robot.Robot;
+import org.ingrahamrobotics.frc2016.Robot;
 
-/**
- *
- */
-public class MotorCommands extends Command {
-
-    public MotorCommands() {
-        // Use requires() here to declare subsystem dependencies
-        requires(Robot.exampleSubsystem);
+public class TankDrive extends Command {
+	
+	private Joystick left = Robot.oi.driveLeft;
+	private Joystick right = Robot.oi.driveRight;
+	
+    public TankDrive() {
+        requires(Robot.tankMotors);
     }
 
-    // Called just before this Command runs the first time
     protected void initialize() {
     }
 
-    // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.tankMotors.drive(left, right);
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -30,10 +29,12 @@ public class MotorCommands extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
+    	Robot.tankMotors.stop();
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
+    	Robot.tankMotors.stop();
     }
 }
