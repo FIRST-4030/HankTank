@@ -1,19 +1,19 @@
 
-package org.ingrahamrobotics.frc2016.subsystems;
+package org.usfirst.frc.team4030.robot.subsystems;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-import org.ingrahamrobotics.frc2016.RobotMap;
-import org.ingrahamrobotics.frc2016.commands.*;
+import org.usfirst.frc.team4030.robot.RobotMap;
+import org.usfirst.frc.team4030.robot.commands.*;
 
 public class TankMotors extends Subsystem {
 
 	private Jaguar left = new Jaguar(RobotMap.pwmDriveLeft);
 	private Jaguar right = new Jaguar(RobotMap.pwmDriveRight);
-    private RobotDrive drive = new RobotDrive(left, right);
+    private RobotDrive drive = new RobotDrive(right, left);
 	
     public void initDefaultCommand() {
         setDefaultCommand(new TankDrive());

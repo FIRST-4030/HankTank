@@ -1,9 +1,9 @@
-package org.ingrahamrobotics.frc2016;
+package org.usfirst.frc.team4030.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 
-import org.ingrahamrobotics.frc2016.commands.TankDrive;
+import org.usfirst.frc.team4030.robot.commands.TankDrive;
 
 /**
  * This class is the glue that binds the controls on the physical operator

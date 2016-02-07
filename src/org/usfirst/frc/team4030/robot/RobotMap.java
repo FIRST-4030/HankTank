@@ -1,4 +1,4 @@
-package org.ingrahamrobotics.frc2016;
+package org.usfirst.frc.team4030.robot;
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -8,8 +8,8 @@ package org.ingrahamrobotics.frc2016;
 public class RobotMap {
 	
 	// Joysticks
-	public static final int joyDriveLeft = 1;
-	public static final int joyDriveRight = 2;
+	public static final int joyDriveLeft = 0;
+	public static final int joyDriveRight = 1;
 	
 	// PWM Outputs
 	public static final int pwmDriveLeft = 0;
