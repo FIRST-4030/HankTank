@@ -7,6 +7,9 @@ package org.usfirst.frc.team4030.robot;
  */
 public class RobotMap {
 	
+	// USB
+	public static final String usbCamera = "cam0";
+	
 	// Joysticks
 	public static final int joyDriveLeft = 0;
 	public static final int joyDriveRight = 1;
