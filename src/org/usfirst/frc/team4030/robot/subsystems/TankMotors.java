@@ -14,6 +14,10 @@ public class TankMotors extends Subsystem {
 	private Jaguar left = new Jaguar(RobotMap.pwmDriveLeft);
 	private Jaguar right = new Jaguar(RobotMap.pwmDriveRight);
     private RobotDrive drive = new RobotDrive(right, left);
+    
+    public TankMotors() {
+    	right.setInverted(true);
+    }
 	
     public void initDefaultCommand() {
         setDefaultCommand(new TankDrive());
